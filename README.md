@@ -73,14 +73,14 @@ Como fica pra usar?
 - git push origin main (primeiro push)
 - git push (2º em diante)
 Em cada projeto, será preciso fazer essa configuração, especificando qual é pessoal e qual nã é: 
-git config user.email "stanleyandrade95@gmail.com"
-git config user.name "Stanley Andrade"
-git config core.sshCommand "ssh -i ~/.ssh/id_github_pessoal"
+- git config user.email "stanleyandrade95@gmail.com"
+- git config user.name "Stanley Andrade"
+- git config core.sshCommand "ssh -i ~/.ssh/id_github_pessoal"
 
 Depois: 
-git branch -M main
-git remote add origin git@github.com:stanleyclientes/midiararario.git (exatamente como fica quando cria no github)
-git push -u origin main
+- git branch -M main
+- git remote add origin git@github.com:stanleyclientes/midiararario.git (exatamente como fica quando cria no github)
+- git push -u origin main
 
 
 
