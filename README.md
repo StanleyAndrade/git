@@ -36,4 +36,40 @@ Apaga uma pasta permanentemente. O -r significa "recursivo". Ele apaga a pasta e
 # trash nome_do_arquivo
 Não apaga permanente, apenas manda para a lixeira. 
 
+# Passo a passo pra usar 2 contas Github no Git
+- ssh-keygen -t ed25519 -C "emailpessoal@gmail.com"
+- ~/.ssh/pessoal_ed25519
+- ssh-keygen -t ed25519 -C "emailempresarial@gmail.com"
+- ~/.ssh/empresarial_ed25519
+- cat ~/.ssh/id_github_pessoal.pub Copie o conteúdo e adicione em GitHub (Conta Empresarial) → Settings → SSH and GPG keys
+Clique em New SSH Key e cole a chave. Em title coloque pessoal e empresarial em cada um.
+- nano ~/.ssh/config dentro do arquivo coloque assim:
+~~  # Conta pessoal
+Host github-pessoal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/pessoal_ed25519
+~~ # Conta empresarial
+Host github-empresarial
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/empresarial_ed25519
+Salve e feche (no Nano, pressione Ctrl + X, depois Y e Enter).
+- Teste as contas ssh -T git@github-pessoal
+- Se tiver ok, você verá: Hi SEU_USUARIO_PESSOAL! You've successfully authenticated, but GitHub does not provide shell access.
+SSH-Agent
+- eval "$(ssh-agent -s)"
+- ssh-add ~/.ssh/pessoal_ed25519
+- ssh-add ~/.ssh/empresarial_ed25519
+- Verifica se as chaves foram adicionadas: ssh-add -l
+
+Como fica pra usar? 
+- git clone git@github-pessoal:pessoal/repositorio.git
+- git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git
+
+
+
+
+
+
 
