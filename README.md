@@ -66,6 +66,24 @@ SSH-Agent
 Como fica pra usar? 
 - git clone git@github-pessoal:pessoal/repositorio.git
 - git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git
+- git remote -v checa qual está conectado
+- git remote add origin git@github.com:stanleyclientes/midiararario.git (cria projeto novo)
+- git remote remove origin (remove o origin pra colocar um novo)
+- git remote set-url origin git@github.com:stanleyclientes/midiararario.git (coloca o novo)
+- git push origin main (primeiro push)
+- git push (2º em diante)
+Em cada projeto, será preciso fazer essa configuração, especificando qual é pessoal e qual nã é: 
+git config user.email "stanleyandrade95@gmail.com"
+git config user.name "Stanley Andrade"
+git config core.sshCommand "ssh -i ~/.ssh/id_github_pessoal"
+
+Depois: 
+git branch -M main
+git remote add origin git@github.com:stanleyclientes/midiararario.git (exatamente como fica quando cria no github)
+git push -u origin main
+
+
+
 
 
 
