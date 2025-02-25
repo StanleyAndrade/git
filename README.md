@@ -82,7 +82,12 @@ Depois:
 - git remote add origin git@github.com:stanleyclientes/midiararario.git (exatamente como fica quando cria no github)
 - git push -u origin main
 
+Desfazer commit localmente e no github
+- git reset --hard HEAD~1
+Ele apaga o ultimo commit localmente. O número no final identifica quantos commits vai apagar.
 
+- git push --force
+Ele atualiza o Github. 
 
 
 
