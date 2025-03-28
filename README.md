@@ -72,14 +72,14 @@ Como fica pra usar?
 - git remote set-url origin git@github.com:stanleyclientes/midiararario.git (coloca o novo)
 - git push origin main (primeiro push)
 - git push (2º em diante)
-Em cada projeto, será preciso fazer essa configuração, especificando qual é pessoal e qual nã é: 
-- git config user.email "stanleyandrade95@gmail.com"
-- git config user.name "Stanley Andrade"
-- git config core.sshCommand "ssh -i ~/.ssh/id_github_pessoal"
 
-Depois: 
+Em cada projeto, será preciso fazer essa configuração, especificando qual é pessoal e qual nã é: 
+- git config user.email "nome@gmail.com"
+- git config user.name "nome"
+- eval $(ssh-agent -s)
+- ssh-add ~/.ssh/empresarial_ed25519 ou outro
 - git branch -M main
-- git remote add origin git@github.com:stanleyclientes/midiararario.git (exatamente como fica quando cria no github)
+- git remote add origin git@github.com:stanleyclientes/nome.git
 - git push -u origin main
 
 Desfazer commit localmente e no github
