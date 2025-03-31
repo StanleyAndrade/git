@@ -11,7 +11,7 @@ Usado para transitar entre pastas. cd puro sai, acompanhado de um nome, ele aces
 Lista tudo o que tem na pasta
 
 # ls .ssh/
-Lista as chaves ssh privadas e publicas, .epub, rsa, known_hosts.
+Lista as chaves ssh privadas e publicas QUE ESTÃO DENTRO DA PASTA SSH: .epub, rsa, known_hosts.
 Elas ficam salvas na raiz do computador. 
 Essas chaves SSH são usadas para se autenticar em servidores sem precisar de senha. No Git, isso é útil para clonar, fazer push e pull de repositórios privados sem precisar digitar a senha toda hora.
 - id_ed25519 – Sua chave privada SSH (usando o algoritmo Ed25519).
@@ -37,7 +37,7 @@ Apaga uma pasta permanentemente. O -r significa "recursivo". Ele apaga a pasta e
 Não apaga permanente, apenas manda para a lixeira. 
 
 # Passo a passo pra usar 2 contas Github no Git
-- Você precisa de uma pasta ssh na raiz do computador. Verifique se ela existe [ls -la ~]
+- Você precisa de uma pasta ssh na raiz do computador. Verifique se ela existe {ls -la ~}
 - vá pra raiz do computador e crie a pasta ssh se ela não existir: mkdir -p ~/.ssh
 
 - ssh-keygen -t ed25519 -C "emailpessoal@gmail.com"
