@@ -37,6 +37,9 @@ Apaga uma pasta permanentemente. O -r significa "recursivo". Ele apaga a pasta e
 Não apaga permanente, apenas manda para a lixeira. 
 
 # Passo a passo pra usar 2 contas Github no Git
+- Você precisa de uma pasta ssh na raiz do computador. Verifique se ela existe [ls -la ~]
+- vá pra raiz do computador e crie a pasta ssh se ela não existir: mkdir -p ~/.ssh
+
 - ssh-keygen -t ed25519 -C "emailpessoal@gmail.com"
 - ~/.ssh/pessoal_ed25519
 - ssh-keygen -t ed25519 -C "emailempresarial@gmail.com"
