@@ -37,13 +37,14 @@ Apaga uma pasta permanentemente. O -r significa "recursivo". Ele apaga a pasta e
 Não apaga permanente, apenas manda para a lixeira. 
 
 # Passo a passo pra usar 2 contas Github no Git
-- Você precisa de uma pasta ssh na raiz do computador. Verifique se ela existe {ls -la ~}
-- vá pra raiz do computador e crie a pasta ssh se ela não existir: mkdir -p ~/.ssh
+- Você precisa de uma pasta ssh na raiz do computador. Verifique se ela existe: ls -la ~
+- Se ela não existir, vá pra raiz do computador e crie a pasta ssh se ela não existir: mkdir -p ~/.ssh
 
+## Agora crie os arquivos pra pastar ssh
 - ssh-keygen -t ed25519 -C "emailpessoal@gmail.com"
-- ~/.ssh/pessoal_ed25519
+- /c/Users/user/.ssh/pessoal_ed25519 ( copie o caminho que aparecer pra você)
 - ssh-keygen -t ed25519 -C "emailempresarial@gmail.com"
-- ~/.ssh/empresarial_ed25519
+- /c/Users/user/.ssh/empresarial_ed25519 ( copie o caminho que aparecer pra você)
 - cat ~/.ssh/id_github_pessoal.pub Copie o conteúdo e adicione em GitHub (Conta Empresarial) → Settings → SSH and GPG keys
 Clique em New SSH Key e cole a chave. Em title coloque pessoal e empresarial em cada um.
 - nano ~/.ssh/config dentro do arquivo coloque assim:
@@ -60,19 +61,21 @@ Host github-empresarial
 Salve e feche (no Nano, pressione Ctrl + X, depois Y e Enter).
 - Teste as contas ssh -T git@github-pessoal
 - Se tiver ok, você verá: Hi SEU_USUARIO_PESSOAL! You've successfully authenticated, but GitHub does not provide shell access.
-SSH-Agent
+
+# Como fica pra usar? 
+# SSH-Agent
 - eval "$(ssh-agent -s)"
 - ssh-add ~/.ssh/pessoal_ed25519
 - ssh-add ~/.ssh/empresarial_ed25519
-- Verifica se as chaves foram adicionadas: ssh-add -l
 
-Como fica pra usar? 
+# Clonando do GitHub
 - git clone git@github-pessoal:pessoal/repositorio.git
+
+
 - git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git
 - git remote -v checa qual está conectado
 - git remote add origin git@github.com:stanleyclientes/midiararario.git (cria projeto novo)
 - git remote remove origin (remove o origin pra colocar um novo)
-- git remote set-url origin git@github.com:stanleyclientes/midiararario.git (coloca o novo)
 - git push origin main (primeiro push)
 - git push (2º em diante)
 
