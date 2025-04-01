@@ -73,9 +73,12 @@ Salve e feche (no Nano, pressione Ctrl + X, depois Y e Enter).
 - git config user.email "nome@gmail.com" (com globa, configura pra todos os projetos)
 - git config user.name "nome"
 
-- git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git
-- git remote -v checa qual está conectado
-- git remote add origin git@github.com:stanleyclientes/midiararario.git (cria projeto novo)
+- git remote add origin git@github.com:stanleyclientes/midiararario.git coloca endereço do repositório em projeto que NÃO TEM NENHUM
+- git push -u origin main
+- git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git atualiza endereço em repositório em projeto que JÁ TEM ENDEREÇO
+- git push
+- git remote -v checa origem
+
 - git remote remove origin (remove o origin pra colocar um novo)
 - git push origin main (primeiro push)
 - git push (2º em diante)
