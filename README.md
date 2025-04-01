@@ -70,7 +70,8 @@ Salve e feche (no Nano, pressione Ctrl + X, depois Y e Enter).
 
 # Clonando do GitHub
 - git clone git@github-pessoal:pessoal/repositorio.git
-
+- git config user.email "nome@gmail.com" (com globa, configura pra todos os projetos)
+- git config user.name "nome"
 
 - git remote set-url origin git@github-pessoal:usuario_pessoal/repositorio.git
 - git remote -v checa qual está conectado
