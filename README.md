@@ -48,12 +48,12 @@ Não apaga permanente, apenas manda para a lixeira.
 - cat ~/.ssh/id_github_pessoal.pub Copie o conteúdo e adicione em GitHub (Conta Empresarial) → Settings → SSH and GPG keys
 Clique em New SSH Key e cole a chave. Em title coloque pessoal e empresarial em cada um.
 - nano ~/.ssh/config dentro do arquivo coloque assim:
-~~  # Conta pessoal
+# Conta pessoal
 Host github-pessoal
     HostName github.com
     User git
     IdentityFile ~/.ssh/pessoal_ed25519
-~~ # Conta empresarial
+# Conta empresarial
 Host github-empresarial
     HostName github.com
     User git
